@@ -8,10 +8,8 @@
 #include "io_helpers.h"
 
 
-
-
 int main(int argc, char* argv[]) {
-    //char *prompt = "mysh$ "; // TODO Step 1, Uncomment this.
+    char *prompt = "mysh$ "; // TODO Step 1, Uncomment this.
 
     char input_buf[MAX_STR_LEN + 1];
     input_buf[MAX_STR_LEN] = '\0';
@@ -23,6 +21,7 @@ int main(int argc, char* argv[]) {
 
         // TODO Step 2:
         // Display the prompt via the display_message function.
+        display_message(prompt);
 
 
         int ret = get_input(input_buf);

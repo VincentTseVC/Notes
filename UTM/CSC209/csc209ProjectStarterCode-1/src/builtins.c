@@ -28,11 +28,14 @@ ssize_t bn_echo(char **tokens) {
 
     if (tokens[index] != NULL) {
         // TODO:
-        // Implement the echo command
+        display_message(tokens[index]);
+        index += 1;
     }
+
     while (tokens[index] != NULL) {
         // TODO:
-        // Implement the echo command
+        display_message(" ");
+        display_message(tokens[index]);
         index += 1;
     }
     display_message("\n");

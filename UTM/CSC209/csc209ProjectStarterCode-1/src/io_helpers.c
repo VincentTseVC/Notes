@@ -52,11 +52,12 @@ ssize_t get_input(char *in_ptr) {
  */
 size_t tokenize_input(char *in_ptr, char **tokens) {
     // TODO, uncomment the next line.
-    //char *curr_ptr = strtok (in_ptr, DELIMITERS);
+    char *curr_ptr = strtok (in_ptr, DELIMITERS);
     size_t token_count = 0;
 
-    while (0) {  // TODO: Fix this
-        // TODO: Fix this
+    while (curr_ptr != NULL) { 
+       tokens[token_count++] = curr_ptr;
+       curr_ptr = strtok(NULL, DELIMITERS);
     }
     tokens[token_count] = NULL;
     return token_count;
